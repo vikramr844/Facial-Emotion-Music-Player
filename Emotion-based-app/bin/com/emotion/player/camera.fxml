@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.emotion.player.CameraController">
+   <top>
+      <VBox spacing="10" style="-fx-background-color: #2c3e50; -fx-padding: 15;">
+         <Label text="Emotion-Based Music Player" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+         <HBox spacing="20" alignment="CENTER_LEFT">
+            <Button fx:id="startCameraBtn" text="Start Camera" onAction="#handleStartCamera" 
+                    style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;" />
+            <Button fx:id="stopCameraBtn" text="Stop Camera" onAction="#handleStopCamera" 
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;" />
+            <Label fx:id="statusLabel" text="Camera: Stopped" style="-fx-text-fill: white; -fx-font-size: 14px;" />
+         </HBox>
+      </VBox>
+   </top>
+   
+   <center>
+      <HBox spacing="20" style="-fx-padding: 15;">
+         <!-- Left: Camera Feed -->
+         <VBox spacing="10" style="-fx-background-color: #ecf0f1; -fx-padding: 15; -fx-border-color: #bdc3c7; -fx-border-radius: 5;">
+            <Label text="Live Camera Feed" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <ImageView fx:id="cameraView" fitWidth="640" fitHeight="480" 
+                      preserveRatio="true" style="-fx-border-color: #34495e; -fx-border-width: 2;" />
+         </VBox>
+         
+         <!-- Right: Music & Emotion Info -->
+         <VBox spacing="15" style="-fx-background-color: #ecf0f1; -fx-padding: 15; -fx-border-color: #bdc3c7; -fx-border-radius: 5;">
+            <VBox spacing="10">
+               <Label text="Detected Emotion" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <Label fx:id="emotionLabel" text="Neutral" 
+                      style="-fx-font-size: 32px; -fx-text-fill: #2980b9; -fx-font-weight: bold; -fx-padding: 10; -fx-background-color: white; -fx-border-color: #3498db; -fx-border-width: 2; -fx-border-radius: 5;" />
+            </VBox>
+            
+            <VBox spacing="10">
+               <Label text="Now Playing" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <Label fx:id="songLabel" text="No song playing" 
+                      style="-fx-font-size: 14px; -fx-padding: 10; -fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+               <HBox spacing="10">
+                  <Button fx:id="playBtn" text="Play" onAction="#handlePlayMusic" 
+                          style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;" />
+                  <Button fx:id="pauseBtn" text="Pause" onAction="#handlePauseMusic" 
+                          style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;" />
+                  <Button fx:id="stopBtn" text="Stop" onAction="#handleStopMusic" 
+                          style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 15;" />
+               </HBox>
+            </VBox>
+            
+            <VBox spacing="10">
+               <Label text="System Statistics" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+               <Label fx:id="statsLabel" text="No data yet" 
+                      style="-fx-font-size: 12px; -fx-padding: 8; -fx-background-color: white; -fx-border-color: #bdc3c7; -fx-border-radius: 5;" />
+            </VBox>
+         </VBox>
+      </HBox>
+   </center>
+</BorderPane>
