@@ -1,33 +1,36 @@
-# Facial-Emotion-Music-Player
-An AI-powered music player that detects facial emotions through webcam and plays matching music in real-time using Java, OpenCV, and JavaFX.
+# Emotion-Based Music Player
 
-# Emotion-Based Music Player 🎵😊
+![Java](https://img.shields.io/badge/Java-11+-blue)
+![OpenCV](https://img.shields.io/badge/OpenCV-4.6-green)
+![JavaFX](https://img.shields.io/badge/JavaFX-17-purple)
 
-A real-time emotion detection music player that uses computer vision and artificial intelligence to create personalized music experiences based on your facial expressions.
+<div align="center">
+  <img src="docs/demo.gif" alt="Demo" width="600"/>
+</div>
 
-## 🚀 Features
+## 📖 About
 
-- **Real-time Emotion Detection**: Uses webcam feed with OpenCV Haar Cascades
-- **AI-Powered Analysis**: Deep learning models for emotion recognition
-- **Dynamic Music Selection**: Automatically plays music matching detected emotions
-- **Modern JavaFX GUI**: Beautiful and responsive user interface
-- **MP3 Streaming**: Online music integration with royalty-free tracks
-- **Live Statistics**: FPS counter, emotion tracking, and system metrics
+An intelligent music player that detects your facial emotions through webcam and plays music that matches your current mood in real-time.
 
-## 🛠️ Tech Stack
+## ✨ Features
 
-- **Java 11+** - Core programming language
-- **OpenCV** - Computer vision and face detection
-- **JavaFX** - Modern GUI framework
-- **Deep Learning** - Emotion recognition models
-- **MP3 Streaming** - Online music API integration
+- 🎭 Real-time facial emotion detection
+- 🎵 Automatic music selection based on mood
+- 📊 Live emotion statistics and analytics  
+- 🎨 Modern and intuitive JavaFX interface
+- 🔄 Dynamic music switching
+- 📷 Webcam integration with OpenCV
 
-## 🎯 Use Cases
+## 🛠️ Installation
 
-- Personalized music experiences
-- AI/ML demonstration projects
-- Computer vision applications
-- Human-computer interaction studies
-- Seminar and academic projects
+### Prerequisites
+- Java 11 or higher
+- OpenCV 4.6+
+- Webcam
 
-## 📁 Project Structure
+### Quick Start
+```bash
+git clone https://github.com/yourusername/Emotion-Music-Player.git
+cd Emotion-Music-Player
+mvn clean compile
+mvn javafx:run
